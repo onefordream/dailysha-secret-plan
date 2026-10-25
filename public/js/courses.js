@@ -25,7 +25,7 @@ window.GOLF_COURSES = [
     url: "https://ap.dailyshagroup.jp/r/fus",
     weekday: 7000,
     holiday: 9500,
-    tags: ["昼食付き", "乗用カート"]
+    tags: ["昼食付き"]
   },
   {
     name: "名阪ロイヤルゴルフクラブ",
@@ -34,7 +34,7 @@ window.GOLF_COURSES = [
     url: "https://ap.dailyshagroup.jp/r/jus",
     weekday: 5380,
     holiday: 10480,
-    tags: []
+    tags: ["昼食付き"]
   },
   {
     name: "京阪カントリー倶楽部",
@@ -43,7 +43,7 @@ window.GOLF_COURSES = [
     url: "https://ap.dailyshagroup.jp/r/dus",
     weekday: 6980,
     holiday: 11980,
-    tags: []
+    tags: ["昼食付き"]
   },
   {
     name: "吉川ロイヤルゴルフクラブ",
@@ -52,7 +52,7 @@ window.GOLF_COURSES = [
     url: "https://ap.dailyshagroup.jp/r/hus",
     weekday: 6150,
     holiday: 11750,
-    tags: []
+    tags: ["昼食付き"]
   }
 ];
 
