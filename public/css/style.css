@@ -397,6 +397,20 @@ a {
   background: rgba(7, 9, 8, 0.35);
 }
 
+.course__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.course__area {
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  color: var(--ivory);
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
+}
+
 .course__name {
   font-family: var(--serif-jp);
   font-weight: 500;

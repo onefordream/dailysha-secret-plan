@@ -60,7 +60,10 @@
       '<span class="course__num" aria-hidden="true">' + num + "</span>" +
       '<span class="course__body">' +
       '<span class="course__info">' +
+      '<span class="course__meta">' +
       '<span class="course__label">SECRET PLAN</span>' +
+      (course.area ? '<span class="course__area">' + esc(course.area) + "</span>" : "") +
+      "</span>" +
       '<span class="course__name">' + esc(course.name) + "</span>" +
       (prices ? '<span class="course__prices">' + prices + "</span>" : "") +
       (tags ? '<span class="course__tags">' + tags + "</span>" : "") +

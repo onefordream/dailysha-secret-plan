@@ -5,6 +5,7 @@
  * ============================================================
  *
  *  name    : カードに表示するゴルフ場名
+ *  area    : 所在地（例 "滋賀県 甲賀市"）。空にすると非表示
  *  image   : コース写真（public/images/ 内のファイル）
  *            推奨サイズ 横1600px × 縦800px 程度 / JPG・WebP / 200KB 前後
  *            同じファイル名で上書きすれば差し替え完了です。
@@ -20,6 +21,7 @@
 window.GOLF_COURSES = [
   {
     name: "デイリー信楽カントリー倶楽部",
+    area: "滋賀県 甲賀市",
     image: "images/daily-shigaraki.webp",
     alt: "デイリー信楽カントリー倶楽部のクラブハウス",
     url: "https://ap.dailyshagroup.jp/r/fus",
@@ -29,6 +31,7 @@ window.GOLF_COURSES = [
   },
   {
     name: "名阪ロイヤルゴルフクラブ",
+    area: "三重県 伊賀市",
     image: "images/meihan-royal.jpg",
     alt: "名阪ロイヤルゴルフクラブのコース風景",
     url: "https://ap.dailyshagroup.jp/r/jus",
@@ -38,6 +41,7 @@ window.GOLF_COURSES = [
   },
   {
     name: "京阪カントリー倶楽部",
+    area: "滋賀県 大津市",
     image: "images/keihan-country.jpg",
     alt: "京阪カントリー倶楽部のクラブハウスとグリーン",
     url: "https://ap.dailyshagroup.jp/r/dus",
@@ -47,6 +51,7 @@ window.GOLF_COURSES = [
   },
   {
     name: "吉川ロイヤルゴルフクラブ",
+    area: "兵庫県 加東市",
     image: "images/yokawa-royal.webp",
     alt: "吉川ロイヤルゴルフクラブのコース風景",
     url: "https://ap.dailyshagroup.jp/r/hus",
