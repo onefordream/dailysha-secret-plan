@@ -38,8 +38,8 @@
         <span class="hero__title-group">デイリー社グループ（関西）ゴルフ場</span>
         <span class="hero__title-main"><em>シークレット価格</em></span>
       </h1>
+      <p id="hero-price" class="hero__price" hidden>平日<strong data-price></strong><span>円〜</span></p>
       <p class="hero__lead">一般公開とは少し違う、<br>特別なゴルフプランをご案内。</p>
-      <p class="hero__tags" aria-hidden="true">PRIVATE PLAN<span class="hero__sep"></span>LIMITED ACCESS</p>
     </header>
 
     <section class="courses" aria-labelledby="courses-title">
@@ -48,10 +48,22 @@
         <h2 id="courses-title" class="courses__title">ゴルフ場を選択してください</h2>
       </div>
 
+      <div class="steps">
+        <p class="steps__title">ご予約の流れ</p>
+        <ol class="steps__list">
+          <li><span class="steps__num">1</span>日付を選ぶ</li>
+          <li><span class="steps__num">2</span>時間・人数</li>
+          <li><span class="steps__num">3</span>ログインで完了</li>
+        </ol>
+        <p class="steps__note">LINEアカウントでもログインできます</p>
+      </div>
+
       <ul id="course-list" class="courses__list"></ul>
       <script src="js/courses.js"></script>
       <script src="js/main.js"></script>
+      <p class="courses__price-note">※表示は最安料金です。料金はプレー日により異なります。</p>
     </section>
+
   </main>
 
   <footer class="footer">

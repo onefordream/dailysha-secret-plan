@@ -31,6 +31,14 @@ public/               ← 公開ディレクトリ（このフォルダをその
 - リンクには `rel="sponsored noopener noreferrer"` が自動で付きます。
 - 新しいタブで開きたい場合は `GOLF_OPEN_IN_NEW_TAB = true` に変更（Instagram 内ブラウザでは `false` 推奨）。
 
+## 料金の変更
+
+`public/js/courses.js` の `weekday`（平日）と `holiday`（土日祝）に最安料金を数字で入れます。
+
+- 不明な場合は `null` にするとカードに表示されません。
+- ページ上部の「平日 ○○円〜」は、4コースの `weekday` の最安値が自動で入ります。
+- `tags` には料金に含まれる内容（例 `"昼食付き"`）を、予約ページで確認できたものだけ入れてください。
+
 ## 写真の差し替え
 
 `public/images/` 内の同名ファイルを上書きするだけで反映されます。

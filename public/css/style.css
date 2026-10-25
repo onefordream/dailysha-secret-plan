@@ -126,7 +126,7 @@ a {
 
 .hero__title-group {
   display: block;
-  font-size: 15px;
+  font-size: clamp(13px, 4vw, 15px);
   font-weight: 400;
   color: var(--grey);
   letter-spacing: 0.12em;
@@ -148,32 +148,41 @@ a {
   -webkit-text-fill-color: transparent;
 }
 
+.hero__price {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 14px;
+  font-size: 15px;
+  letter-spacing: 0.1em;
+  color: var(--ivory);
+}
+
+.hero__price[hidden] {
+  display: none;
+}
+
+.hero__price strong {
+  font-family: var(--serif-en);
+  font-weight: 600;
+  font-size: clamp(38px, 11vw, 56px);
+  line-height: 1;
+  letter-spacing: 0.02em;
+  color: var(--gold-light);
+}
+
+.hero__price span {
+  font-size: 15px;
+  color: var(--ivory);
+}
+
 .hero__lead {
   margin-top: 22px;
   font-size: 14px;
   line-height: 2;
   letter-spacing: 0.08em;
   color: var(--grey);
-}
-
-.hero__tags {
-  margin-top: 26px;
-  font-family: var(--serif-en);
-  font-weight: 500;
-  font-size: 11px;
-  letter-spacing: 0.34em;
-  text-indent: 0.34em;
-  color: var(--gold-soft);
-}
-
-.hero__sep {
-  display: inline-block;
-  width: 14px;
-  height: 1px;
-  margin: 0 0.9em 0 0.6em; /* 直前の letter-spacing 分を差し引いて左右均等に */
-  vertical-align: middle;
-  background: var(--gold-soft);
-  opacity: 0.6;
 }
 
 /* ------------------------------------------------------------
@@ -215,12 +224,85 @@ a {
   gap: 16px;
 }
 
+.steps {
+  margin: -6px auto 22px;
+  max-width: 520px;
+  padding: 14px 12px 12px;
+  border: 1px solid rgba(191, 160, 106, 0.2);
+  border-radius: 6px;
+  background: rgba(7, 9, 8, 0.35);
+  text-align: center;
+}
+
+.steps__title {
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  color: var(--gold);
+}
+
+.steps__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 10px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.steps__list li {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  font-size: 12.5px;
+  line-height: 1.4;
+  color: var(--ivory);
+}
+
+/* ステップ間の細い線 */
+.steps__list li + li::before {
+  content: "";
+  position: absolute;
+  top: 11px;
+  right: calc(50% + 18px);
+  width: calc(100% - 36px);
+  height: 1px;
+  background: rgba(191, 160, 106, 0.35);
+}
+
+.steps__num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border: 1px solid rgba(191, 160, 106, 0.7);
+  border-radius: 50%;
+  font-family: var(--serif-en);
+  font-weight: 600;
+  font-size: 12px;
+  color: var(--gold-light);
+}
+
+.steps__note {
+  margin-top: 10px;
+  font-size: 11.5px;
+  color: var(--grey);
+}
+
+.courses__price-note {
+  margin-top: 14px;
+  font-size: 11px;
+  text-align: center;
+  color: var(--grey-dim);
+}
+
 /* ---------- Card ---------- */
 
 .course {
   position: relative;
   display: block;
-  height: clamp(230px, 66vw, 280px);
+  height: clamp(270px, 78vw, 320px);
   overflow: hidden;
   border-radius: 6px;
   background-color: var(--green);
@@ -323,6 +405,64 @@ a {
   letter-spacing: 0.05em;
   color: var(--white);
   text-shadow: 0 1px 14px rgba(0, 0, 0, 0.45);
+}
+
+.course__prices {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  column-gap: 16px;
+  row-gap: 2px;
+  margin-top: 2px;
+}
+
+.course__price {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 5px;
+  white-space: nowrap;
+  color: var(--ivory);
+}
+
+.course__price-label {
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  color: var(--grey);
+}
+
+.course__price-num {
+  font-family: var(--serif-en);
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 1.1;
+  color: var(--gold-light);
+  text-shadow: 0 1px 12px rgba(0, 0, 0, 0.5);
+}
+
+.course__price + .course__price .course__price-num {
+  font-size: 20px;
+  color: var(--ivory);
+}
+
+.course__price-unit {
+  font-size: 12px;
+  color: var(--ivory);
+}
+
+.course__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.course__tag {
+  padding: 1px 8px;
+  border: 1px solid rgba(242, 237, 226, 0.35);
+  border-radius: 2px;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  color: var(--ivory);
+  background: rgba(7, 9, 8, 0.35);
 }
 
 .course__cta {
@@ -502,6 +642,19 @@ a {
 
   .course__label {
     font-size: 11px;
+  }
+
+  .course__price-num {
+    font-size: 34px;
+  }
+
+  .course__price + .course__price .course__price-num {
+    font-size: 24px;
+  }
+
+  .course__price-label,
+  .course__price-unit {
+    font-size: 13px;
   }
 
   .course__cta {
